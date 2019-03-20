@@ -1,15 +1,21 @@
 {
-  "name": "mario",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "team-8-bit-gang",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "start": "serve ./public",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "serve": "^6.1.0"
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "hbs": "~4.0.1",
+    "http-errors": "~1.6.2",
+    "morgan": "~1.9.0",
+    "sequelize": "^5.1.0",
+    "sqlite3": "^4.0.6"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
   }
 }
