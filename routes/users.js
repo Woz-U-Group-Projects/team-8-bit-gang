@@ -2,6 +2,8 @@ var express = require('express');
 var router = express.Router();
 const sqlite = require('sqlite3').verbose();
 var models = require('../models');
+const passport = require('passport');
+const connectEnsure = require('connect-ensure-login');
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
@@ -37,15 +39,12 @@ router.get('/login', function(req, res, next) {
   res.render('login');
 });
 
-router.post('/login', function(req, res, next) {
-  models.users
-    .findOne({
-      where: {
-        Username: req.body.username
-      }
-    })
-    .then(user => {
+router.post('/login', passport.authenticate('local', {
+  failureRedirect: '/users/login'
+}),
+ function(req, res, next) {
+ 
       res.redirect('/');
-    });
+    
 });
 module.exports = router;
