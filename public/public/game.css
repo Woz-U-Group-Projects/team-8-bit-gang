@@ -1,0 +1,286 @@
+/*reset css*/
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  color: #222;
+  background-color: #111;
+}
+
+.heroes {
+  display: none;
+  background: url("./img/mario-left.jpg");
+  background-size: 100%;
+  width: 315.5px;
+  height: 397px;
+  float: left;
+}
+
+.villains {
+  display: none;
+  position: relative;
+  left: 12px;
+  top: -20px;
+  background: url("./img/mario-right.png");
+  background-size: 100% 100%;
+  width: 355px;
+  height: 432px;
+  float: right;
+}
+
+.villains {
+  float: right;
+}
+
+.game img {
+position: absolute;
+left: 29.5%;
+width: 425px;
+height: 160px;
+}
+
+.game .border canvas {
+padding-left: 6px;
+padding-top: 6px;
+width: 1060px;
+height: 640px;
+}
+
+.game .border {
+  position: absolute;
+  background: linear-gradient(195deg, #000, #999);
+  left: 28.5vw;
+  top: 161px;
+  width: 436px;
+  height: 236px;
+}
+
+#myController {
+  position: absolute;
+  left: 28.5vw;
+  top: calc(161px + 230px);
+  width: 436px;
+  height: 236px;
+  background-image: url('./img/nes-ctrl-layout.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+#myController buttons {
+  background-color: #fff333;
+}
+
+.left {
+  position: absolute;
+  top: 110px;
+  left: 45px;
+  width: 27px;
+  height: 27px;
+  background: rgba(0, 0, 0, 0)
+}
+
+.left:hover{
+  background: rgba(100, 100, 100, 0.5)
+}
+
+.right {
+  position: absolute;
+  top: 110px;
+  left: 95px;
+  width: 27px;
+  height: 27px;
+  background: rgba(0, 0, 0, 0)
+}
+
+.right:hover{
+  background: rgba(100, 100, 100, 0.5)
+}
+
+.start {
+  border-radius: 15px;
+  position: absolute;
+  top: 137px;
+  left: 223px;
+  width: 39px;
+  height: 15px;
+  background: rgba(0, 0, 0, 0)
+}
+
+.start:hover{
+  background: rgba(100, 100, 100, 0.5)
+}
+
+/*Run and Fire*/
+.a {
+  border-radius: 50%;
+  position: absolute;
+  top: 122px;
+  left: 292px;
+  width: 40px;
+  height: 42px;
+  background: rgba(0, 0, 0, 0)
+}
+
+.a:hover{
+  background: rgba(100, 100, 100, 0.5)
+}
+
+/*Jump*/
+.b {
+  border-radius: 50%;
+  position: absolute;
+  top: 122px;
+  left: 347px;
+  width: 40px;
+  height: 42px;
+  background: rgba(0, 0, 0, 0)
+}
+
+.b:hover{
+  background: rgba(100, 100, 100, 0.5)
+}
+
+#myController buttons .start {
+  background-color: #fff333;
+}
+
+#myController buttons .a {
+  background-color: #fff333;
+}
+
+#myController buttons .b {
+  background-color: #fff333;
+}
+
+@media only screen and (max-width: 600px) {
+      .game .border canvas {
+        width: 885px;
+        height: 640px;
+      }
+
+      .game .border {
+        left: 0;
+        top: 161px;
+        width: 100%;
+        height: 236px;
+      }
+
+      #myController {
+        left: 0;
+      }
+
+      .game img {
+        left: 0px;
+        width: 100%;
+      }
+
+      .game {
+        width: 100%;
+        height: 10vh;
+      }
+    }
+
+    @media only screen and (min-width: 600px) {
+          .heroes {
+            display: none;
+          }
+
+          .game .border canvas {
+            left: 29.5%;
+            width: 1024px;
+            height: 640px;
+          }
+
+          .game .border {
+            left: 29.5%;
+            top: 161px;
+            width: 423px;
+            height: 236px;
+          }
+
+          .villains {
+            display: none;
+          }
+          .game img {
+          position: absolute;
+          left: 29.5%;
+          }
+
+          .game {
+            width: 100vw;
+            height: 10vh;
+          }
+        }
+
+    @media only screen and (min-width: 800px) {
+          .heroes {
+            display: block;
+          }
+
+          .game .border canvas {
+            left: 29.5%;
+            width: 1024px;
+            height: 640px;
+          }
+
+          .game .border {
+            left: 29.5%;
+            top: 161px;
+            width: 423px;
+            height: 236px;
+          }
+
+          .villains {
+            display: block;
+          }
+          .game img {
+          position: absolute;
+          left: 29.5%;
+          }
+
+          .game {
+            width: 100vw;
+            height: 10vh;
+          }
+        }
+
+        @media only screen and (min-width: 1000px) {
+              .heroes {
+                display: block;
+              }
+
+              .villains {
+                display: block;
+              }
+              .game img {
+              position: absolute;
+              left: 29.5%;
+              }
+
+              .game .border {
+                position: absolute;
+                left: 29.6%;
+                width: 425px;
+                height: 236px;
+              }
+
+              .game .border canvas {
+                position: absolute;
+                left: 2px;
+                width: 1024px;
+                height: 640px;
+              }
+
+              #myController {
+                display: none;
+              }
+
+              .game {
+                width: 100vw;
+                height: 10vh;
+              }
+            }
