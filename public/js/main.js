@@ -1,40 +1,42 @@
+import Timer from './Timer.js';
 import {loadLevel} from './loaders.js';
-import {loadMarioSprite, loadBackgroundSprites} from './sprites.js'
-import Compositor from './Compositor.js';
-import{createBackgroundLayer} from './layers.js';
+import {createMario} from './entities.js';
 
 const canvas = document.getElementById('screen');
 const context = canvas.getContext('2d');
 
-function createSpriteLayer(sprite, pos) {
-  return function drawSpriteLayer(context) {
-    sprite.draw('idle', context, pos.x, pos.y);
-  };
-}
+import Keyboard from './KeyboardStates.js';
 
 Promise.all([
-  loadMarioSprite(),
-  loadBackgroundSprites(),
-  loadLevel('1-1'),
+    createMario(),
+    loadLevel('1-1'),
 ])
-.then(([marioSprite, backgroundSprites, level,]) =>{
-  const comp = new Compositor();
+.then(([mario, level]) => {
 
-  const backgroundLayer = createBackgroundLayer(level.backgrounds, backgroundSprites);
-  comp.layers.push(backgroundLayer);
-  const pos = {
-    x: 64,
-    y: 64,
-  };
 
-const spriteLayer = createSpriteLayer(marioSprite, pos);
-comp.layers.push(spriteLayer);
+    const gravity = 2000;
+    mario.pos.set(64, 64);
 
-function update() {
-  comp.draw(context);
-  pos.x+=2;
-  pos.y+=2;
-  requestAnimationFrame(update);
-  }
-  update();
+    level.entities.add(mario);
+
+    const SPACE = 32;
+    const input = new Keyboard();
+    input.addMapping(SPACE, keyState => {
+      if(keyState) {
+        mario.jump.start();
+      }else{
+        mario.jump.cancel();
+      }
+      console.log("Space Key Pressed!");
+    });
+    input.listenTo(window);
+
+    const timer = new Timer(1/60);
+    timer.update = function update(deltaTime) {
+        level.update(deltaTime);
+        level.comp.draw(context);
+        mario.vel.y += gravity * deltaTime;
+    }
+
+    timer.start();
 });

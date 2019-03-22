@@ -1,15 +1,15 @@
 export default class SpriteSheet {
-    constructor(image, w = 16, h = 16) {
+    constructor(image, width, height) {
         this.image = image;
-        this.width = w;
-        this.height = h;
+        this.width = width;
+        this.height = height;
         this.tiles = new Map();
     }
 
     define(name, x, y, width, height) {
         const buffer = document.createElement('canvas');
-        buffer.height = height;
         buffer.width = width;
+        buffer.height = height;
         buffer
             .getContext('2d')
             .drawImage(
@@ -22,11 +22,11 @@ export default class SpriteSheet {
                 0,
                 width,
                 height);
-        this.tiles.set(name, buffer);
+        this.tiles.set(name, buffer)
     }
 
-    defineTile(name, x, y){
-      this.define(name, x * this.width, y * this.height, this.width, this.height)
+    defineTile(name, x, y) {
+        this.define(name, x * this.width, y * this.height, this.width, this.height);
     }
 
     draw(name, context, x, y) {

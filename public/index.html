@@ -1,9 +1,24 @@
+<!DOCTYPE html>
 <html>
 <head>
     <title>Super Mario</title>
+    <link rel="favicon" href="favicon.ico">
+    <link rel="stylesheet" href="game.css">
     <script type="module" src="/js/main.js"></script>
 </head>
 <body>
-    <canvas id="screen" width="640" height="480"></canvas>
+  <div class="game">
+    <img src="./img/logo.png" alt="Title">
+    <div class="border">
+      <canvas id="screen" width="640" height="640"></canvas>
+    </div>
+      <div id="myController">
+        <button class="left" type="button" name="left"></button>
+        <button class="right" type="button" name="right"></button>
+        <button class="start" type="button" name="start"></button>
+        <button class="a" type="button" name="a"></button>
+        <button class="b" type="button" name="b"></button>
+      </div>
+  </div>
 </body>
 </html>
