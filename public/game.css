@@ -11,18 +11,47 @@ body {
   background-color: #111;
 }
 
+.heroes {
+  position: absolute;
+  top: 0px;
+  left: 3px;
+  display: none;
+  background: url("./img/mario-left.jpg");
+  background-size: 100%;
+  width: 315.5px;
+  height: 397px;
+  float: left;
+}
+
+.villains {
+  position: absolute;
+  top: -20px;
+  left: 734px;
+  display: none;
+  background: url("./img/mario-right.png");
+  background-size: 100% 100%;
+  width: 355px;
+  height: 432px;
+  float: right;
+}
+
+.game {
+  display: flex;
+  justify-content: center;
+  margin-left: calc(50% - 640px);
+}
+
 .game img {
 position: absolute;
 left: 29.5%;
 width: 425px;
 height: 160px;
+top: 0px;
 }
 
 .game .border canvas {
 padding-left: 6px;
 padding-top: 6px;
-width: 1060px;
-height: 640px;
 }
 
 .game .border {
@@ -30,8 +59,8 @@ height: 640px;
   background: linear-gradient(195deg, #000, #999);
   left: 28.5vw;
   top: 161px;
-  width: 436px;
-  height: 236px;
+  width: 640px;
+  height: 640px;
 }
 
 #myController {
@@ -131,19 +160,87 @@ height: 640px;
   background-color: #fff333;
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (max-width: 600px) {
+      .game .border canvas {
+        width: 885px;
+        height: 640px;
+      }
+
+      .game .border {
+        left: 0;
+        top: 161px;
+        width: 100%;
+        height: 236px;
+      }
+
+      #myController {
+        left: 0;
+      }
+
       .game img {
-        position: absolute;
-        left: 29.5%;
+        left: 0px;
+        width: 100%;
       }
 
       .game {
-        width: 100vw;
+        width: 100%;
         height: 10vh;
       }
     }
 
+    @media only screen and (min-width: 600px) {
+          .heroes {
+            display: none;
+          }
+
+          .game .border canvas {
+            left: 29.5%;
+            width: 1024px;
+            height: 640px;
+          }
+
+          .game .border {
+            left: 29.5%;
+            top: 161px;
+            width: 423px;
+            height: 236px;
+          }
+
+          .villains {
+            display: none;
+          }
+          .game img {
+          position: absolute;
+          left: 29.5%;
+          }
+
+          .game {
+            width: 100vw;
+            height: 10vh;
+          }
+        }
+
     @media only screen and (min-width: 800px) {
+          .heroes {
+            display: block;
+          }
+
+          .game .border canvas {
+            left: 29.5%;
+            width: 1024px;
+            height: 640px;
+          }
+
+          .game .border {
+            left: 29.5%;
+            top: 161px;
+            width: 423px;
+            height: 236px;
+          }
+
+          .villains {
+            display: block;
+          }
           .game img {
           position: absolute;
           left: 29.5%;
@@ -156,9 +253,30 @@ height: 640px;
         }
 
         @media only screen and (min-width: 1000px) {
+              .heroes {
+                display: block;
+              }
+
+              .villains {
+                display: block;
+              }
               .game img {
               position: absolute;
               left: 29.5%;
+              }
+
+              .game .border {
+                position: absolute;
+                left: 29.6%;
+                width: 425px;
+                height: 236px;
+              }
+
+              .game .border canvas {
+                position: absolute;
+                left: 2px;
+                width: 1024px;
+                height: 640px;
               }
 
               #myController {

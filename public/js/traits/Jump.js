@@ -1,24 +1,32 @@
 import {Trait} from '../Entity.js';
 
 export default class Jump extends Trait {
-  constructor() {
-    super('jump');
+    constructor() {
+        super('jump');
 
-    this.duration = 0.5;
-    this.velocity = 200;
-    this.engageTime = 0;
-  }
+        this.ready = false;
+        this.duration = 0.5;
+        this.engageTime = 0;
 
-  start(){
-    this.engageTime = this.duration;
-  }
+        this.velocity = 200;
+    }
 
-  cancel() {
-    this.engageTime = 0;
-  }
+    start() {
+        this.engageTime = this.duration;
+    }
 
-  update(entity, deltaTime) {
-      entity.vel.y = -this.velocity;
-      this.engageTime -= deltaTime;
-  }
+    cancel() {
+        this.engageTime = 0;
+    }
+
+    obstruct(entity, side) {
+
+    }
+
+    update(entity, deltaTime) {
+        if (this.engageTime > 0) {
+            entity.vel.y = -this.velocity;
+            this.engageTime -= deltaTime;
+        }
+    }
 }

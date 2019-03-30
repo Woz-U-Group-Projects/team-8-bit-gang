@@ -1,0 +1,14 @@
+{
+    "imageURL": "/img/characters.gif",
+
+    "flag": [
+        {
+            "name": "pole",
+            "rect": [256, 160, 16, 16]
+        },
+        {
+            "name": "bulb",
+            "rect": [256, 144, 16, 16]
+        }
+    ]
+}
