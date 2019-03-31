@@ -19,5 +19,6 @@ export function setupKeyboard(entity) {
         entity.go.dir += keyState ? -1 : 1;
     });
 
+    
     return input;
 }

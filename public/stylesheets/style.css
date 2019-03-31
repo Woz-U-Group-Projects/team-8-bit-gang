@@ -1,8 +1,121 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
+ 
+  
+  }
 
 a {
   color: #00B7FF;
 }
+
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {width: 8.33%;}
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+}
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+
+button{
+  
+  font-family: '8BITWONDERNominal'; 
+  font-weight: normal; 
+  font-style: normal;
+
+}
+
+.header{
+  font-family: '8BITWONDERNominal'; 
+   font-weight: normal; 
+   font-style: normal;
+   color: rgb(220, 55, 55);
+}
+
+.lastname{
+  font-family: '8BITWONDERNominal'; 
+   font-weight: normal; 
+   font-style: normal;
+}
+
+.firstname{
+  font-family: '8BITWONDERNominal'; 
+   font-weight: normal; 
+   font-style: normal;
+}
+
+.email{
+  font-family: '8BITWONDERNominal'; 
+   font-weight: normal; 
+   font-style: normal;
+}
+
+.password{
+  font-family: '8BITWONDERNominal'; 
+   font-weight: normal; 
+   font-style: normal;
+}
+
+.username{
+  font-family: '8BITWONDERNominal'; 
+   font-weight: normal; 
+   font-style: normal;
+}
+
+.body1{
+  text-align: center;
+ background-color: gray;
+ width: 500px;
+ height: 300px;
+ margin-left: auto;
+ margin-right: auto;
+ border-bottom-left-radius: 10px;
+ border-bottom-right-radius: 10px;
+ border-top-left-radius: 10px;
+ border-top-right-radius: 10px;
+ 
+ 
+}
+
+.body2{
+  text-align: center;
+ background-color: gray;
+ width: 400px;
+ height: 150px;
+ margin-left: auto;
+ margin-right: auto;
+ border-bottom-left-radius: 10px;
+ border-bottom-right-radius: 10px;
+ 
+ 
+}
+
+label {
+  display: inline-block;
+  width: 140px;
+  text-align: right;
+  padding-top: 5px;
+  padding-bottom: 10px;
+}
+
+.arrow-down {
+  margin-left: auto;
+  margin-right: auto;
+  width: 0; 
+  height: 0; 
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  
+  border-top: 40px solid rgb(86, 84, 84);
+}
+
+
+
+
