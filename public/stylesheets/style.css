@@ -116,6 +116,14 @@ label {
   border-top: 40px solid rgb(86, 84, 84);
 }
 
+.image{
+  background-image: url('/public/img/mario-right.png');
+}
 
+form{
+  background: url(./public/public/img/nes.png);
+}
 
-
+.welcome{
+  background-image: url('/public/img/mario-right.png');
+}

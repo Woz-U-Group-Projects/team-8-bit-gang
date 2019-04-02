@@ -2,8 +2,11 @@ var express = require('express');
 var router = express.Router();
 const sqlite = require('sqlite3').verbose();
 var models = require('../models');
+var nodemailer = require('nodemailer');
 const passport = require('passport');
 const connectEnsure = require('connect-ensure-login');
+
+
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
