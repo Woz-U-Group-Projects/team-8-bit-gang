@@ -117,13 +117,5 @@ label {
 }
 
 .image{
-  background-image: url('/public/img/mario-right.png');
-}
-
-form{
-  background: url(./public/public/img/nes.png);
-}
-
-.welcome{
-  background-image: url('/public/img/mario-right.png');
+  background-image: url('/public/img/overworld_bg.png');
 }
