@@ -13,11 +13,14 @@ a {
 @media only screen and (min-width: 600px) {
   /* For tablets: */
   .col-s-1 {width: 8.33%;}
+  
+  
 }
 
 @media only screen and (min-width: 768px) {
   /* For desktop: */
   .col-1 {width: 8.33%;}
+ 
 }
 /* For mobile phones: */
 [class*="col-"] {
@@ -117,5 +120,80 @@ label {
 }
 
 .image{
-  background-image: url('/public/img/overworld_bg.png');
+  height: 400px;
+  width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url('/public/img/nes-ctrl-layout.png');
+  background-repeat: no-repeat;
+  background-position: center; 
+  background-size: 700px 400px; 
+  
+ 
+  
 }
+
+
+ .button{
+  padding-top: 84px;
+  padding-left: 350px;
+ display: inline-block;
+ position: relative;
+ margin-left: auto;
+ margin-right: auto;
+
+ }
+
+ .user{
+   width: 30%;
+   padding-top: 10.5%;
+   margin-left: auto;
+   margin-right: auto;
+   
+ }
+
+ .pass{
+  padding-top: .2%;
+  width:30%;
+   margin-left: auto;
+   margin-right: auto;
+  
+  
+ }
+ .button1{
+   color: white;
+   background-color: black;
+   height: 30px;
+  border-radius: 20px;
+ text-align: center;
+ }
+
+ .usern{
+   height: 40px;
+   width: 100%;
+  border-radius: 20px;
+  background-color: rgb(93, 92, 92);
+  color: white;
+  display: inline-block;
+
+ }
+
+ .input1{
+  height: 40px;
+  width: 100%;
+ border-radius: 20px;
+ background-color: rgb(93, 92, 92);
+ color: white;
+display: inline-block;
+
+
+ }
+
+@media only screen and (max-width: 100%) {
+  /* For tablets: */
+  .image{background-size: 700px 400px;}
+  .body3{width: 100%}
+  .user {width: 100px;}
+  .pass {width:10px;}
+}
+ 
