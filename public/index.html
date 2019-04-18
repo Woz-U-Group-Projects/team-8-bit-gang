@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+        <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/8bit-wonder" type="text/css"/>
     <title>Super Mario</title>
     <style>
         body {
@@ -10,6 +11,7 @@
             background-size: 125vw 125vh;
             background-repeat: no-repeat;
             background-position: -110px -100px;
+            font-family: '8BITWONDERNominal';
         }
 
         .land {
@@ -22,7 +24,7 @@
         p {
             text-align: center;
             text-shadow: 0px 0px 8px #999;
-            color: #111;
+            color:black;
             display: block;
             image-rendering: pixelated;
             margin: 2rem auto;
@@ -31,7 +33,7 @@
 
         a {
             text-shadow: 0px 0px 8px #999;
-            color: #111;
+            color:rgb(255, 0, 200);
             text-decoration: none;
             transition: color ease-out 0.5s;
         }
@@ -40,12 +42,16 @@
             text-shadow: 0px 0px 2px #111;
             color: cornflowerblue;
             transition: color ease-in 0.5s;
+        } 
+
+        .login{
+            color:royalblue;
         }
     </style>
 </head>
 <body>
     <h1 class="land">Welcome to the 8-bit Mario clone</h1>
-    <p><a href="/users/login">Login</a>, <a href="/users/signup">Create an account</a>, or</br>
+    <p><a class="login" href="/users/login">Login</a>, <a href="/users/signup">Create an account</a>, or</br>
     <a href="./game.html"> Click here</a> to play the game!</p>
 </body>
 </html>
