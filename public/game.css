@@ -11,29 +11,7 @@ body {
   background-color: #111;
 }
 
-.heroes {
-  position: absolute;
-  top: 0px;
-  left: 3px;
-  display: none;
-  background: url("./img/mario-left.jpg");
-  background-size: 100%;
-  width: 315.5px;
-  height: 397px;
-  float: left;
-}
 
-.villains {
-  position: absolute;
-  top: -20px;
-  left: 734px;
-  display: none;
-  background: url("./img/mario-right.png");
-  background-size: 100% 100%;
-  width: 355px;
-  height: 432px;
-  float: right;
-}
 
 .game {
   display: flex;
@@ -78,7 +56,7 @@ padding-top: 6px;
   background-color: #fff333;
 }
 
-.left {
+#left {
   position: absolute;
   top: 110px;
   left: 45px;
@@ -87,11 +65,11 @@ padding-top: 6px;
   background: rgba(0, 0, 0, 0)
 }
 
-.left:hover{
+#left:hover{
   background: rgba(100, 100, 100, 0.5)
 }
 
-.right {
+#right {
   position: absolute;
   top: 110px;
   left: 95px;
@@ -100,11 +78,11 @@ padding-top: 6px;
   background: rgba(0, 0, 0, 0)
 }
 
-.right:hover{
+#right:hover{
   background: rgba(100, 100, 100, 0.5)
 }
 
-.start {
+#start {
   border-radius: 15px;
   position: absolute;
   top: 137px;
@@ -114,12 +92,12 @@ padding-top: 6px;
   background: rgba(0, 0, 0, 0)
 }
 
-.start:hover{
+#start:hover{
   background: rgba(100, 100, 100, 0.5)
 }
 
 /*Run and Fire*/
-.a {
+#run {
   border-radius: 50%;
   position: absolute;
   top: 122px;
@@ -129,12 +107,12 @@ padding-top: 6px;
   background: rgba(0, 0, 0, 0)
 }
 
-.a:hover{
+#run:hover{
   background: rgba(100, 100, 100, 0.5)
 }
 
 /*Jump*/
-.b {
+#jump {
   border-radius: 50%;
   position: absolute;
   top: 122px;
@@ -144,7 +122,7 @@ padding-top: 6px;
   background: rgba(0, 0, 0, 0)
 }
 
-.b:hover{
+#jump:hover{
   background: rgba(100, 100, 100, 0.5)
 }
 
@@ -162,6 +140,7 @@ padding-top: 6px;
 
 @media only screen and (max-width: 600px) {
       .game .border canvas {
+        left: 0;
         width: 885px;
         height: 640px;
       }
@@ -188,8 +167,8 @@ padding-top: 6px;
       }
     }
 
-    @media only screen and (min-width: 600px) {
-          .heroes {
+    @media only screen and (max-width: 800px) {
+          .img-left {
             display: none;
           }
 
@@ -206,16 +185,16 @@ padding-top: 6px;
             height: 236px;
           }
 
-          .villains {
+          .img-right {
             display: none;
           }
-          .game img {
+          /*.game img {
           position: absolute;
           left: 29.5%;
-          }
+          }*/
 
           .game {
-            width: 100vw;
+            width: 100%;
             height: 10vh;
           }
         }

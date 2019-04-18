@@ -124,7 +124,7 @@ label {
   width: 700px;
   margin-left: auto;
   margin-right: auto;
-  background-image: url('/public/img/nes-ctrl-layout.png');
+  background-image: url('../img/nes-ctrl-layout.png');
   background-repeat: no-repeat;
   background-position: center; 
   background-size: 700px 400px; 

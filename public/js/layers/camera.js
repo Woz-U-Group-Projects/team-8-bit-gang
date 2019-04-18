@@ -7,6 +7,6 @@ export function createCameraLayer(cameraToDraw) {
             cameraToDraw.pos.y - fromCamera.pos.y,
             cameraToDraw.size.x,
             cameraToDraw.size.y);
-        context.stroke();
+        //context.stroke();
     };
 }

@@ -1,4 +1,4 @@
-/*function createEntityLayer(entities) {
+function createEntityLayer(entities) {
     return function drawBoundingBox(context, camera) {
         context.strokeStyle = 'red';
         entities.forEach(entity => {
@@ -8,7 +8,7 @@
                 entity.bounds.top - camera.pos.y,
                 entity.size.x,
                 entity.size.y);
-            context.stroke();
+            //context.stroke();
         });
     };
 }
@@ -33,7 +33,7 @@ function createTileCandidateLayer(tileCollider) {
                 x * tileSize - camera.pos.x,
                 y * tileSize - camera.pos.y,
                 tileSize, tileSize);
-            context.stroke();
+            //context.stroke();
         });
 
         resolvedTiles.length = 0;
@@ -49,4 +49,4 @@ export function createCollisionLayer(level) {
         drawTileCandidates(context, camera);
         drawBoundingBoxes(context, camera);
     };
-}*/
+}

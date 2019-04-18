@@ -1,27 +1,51 @@
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>Super Mario</title>
-    <link rel="favicon" href="favicon.ico">
-    <link rel="stylesheet" href="game.css">
-    <script type="module" src="/js/main.js"></script>
+    <style>
+        body {
+            background: #000;
+            margin: 0;
+            background-image: url("./img/bg.png");
+            background-size: 125vw 125vh;
+            background-repeat: no-repeat;
+            background-position: -110px -100px;
+        }
+
+        .land {
+            text-align: center;
+            text-shadow: 0px 0px 8px #999;
+            color: #111;
+            font-size: 4rem;
+        }
+
+        p {
+            text-align: center;
+            text-shadow: 0px 0px 8px #999;
+            color: #111;
+            display: block;
+            image-rendering: pixelated;
+            margin: 2rem auto;
+            font-size: 1.5rem;
+        }
+
+        a {
+            text-shadow: 0px 0px 8px #999;
+            color: #111;
+            text-decoration: none;
+            transition: color ease-out 0.5s;
+        }
+
+        a:hover {
+            text-shadow: 0px 0px 2px #111;
+            color: cornflowerblue;
+            transition: color ease-in 0.5s;
+        }
+    </style>
 </head>
 <body>
-  <div class="game">
-    <section class="heroes"></section>
-    <section class="villains"></section>
-    <img class="title" src="./img/logo.png" alt="Title">
-    <div class="border">
-      <canvas id="screen" width="680" height="690"></canvas>
-    </div>
-      <div id="myController">
-        <button class="left" type="button" name="left"></button>
-        <button class="right" type="button" name="right"></button>
-        <button class="start" type="button" name="start"></button>
-        <button class="a" type="button" name="a"></button>
-        <button class="b" type="button" name="b"></button>
-      </div>
-  </div>
+    <h1 class="land">Welcome to the 8-bit Mario clone</h1>
+    <p><a href="/users/login">Login</a>, <a href="/users/signup">Create an account</a>, or</br>
+    <a href="./game.html"> Click here</a> to play the game!</p>
 </body>
 </html>

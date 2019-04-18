@@ -1,4 +1,9 @@
+const username = localStorage.getItem('username');
+
+localStorage.setItem('username', document.getElementById("username"));
+
 export function createDashboardLayer(font, playerEnv) {
+
     const LINE1 = font.size;
     const LINE2 = font.size * 2;
 
@@ -7,8 +12,8 @@ export function createDashboardLayer(font, playerEnv) {
 
     return function drawDashboard(context) {
         const {score, time} = playerEnv.playerController;
-
-        font.print('MARIO', context, 16, LINE1);
+        
+        font.print(/*username || */'Mario', context, 16, LINE1);
         font.print(score.toString().padStart(6, '0'), context, 16, LINE2);
 
         font.print('@x' + coins.toString().padStart(2, '0'), context, 96, LINE2);
