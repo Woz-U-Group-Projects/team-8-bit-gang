@@ -73,8 +73,8 @@ async function main(canvas) {
     }
     function touchCancel(e) {
         e.preventDefault();
-        touchX(null);
-        touchY(null);
+        mario.go.dir = 0;
+        mario.jump.cancel();
     }
     function touchMove(e) {
         e.preventDefault();
@@ -82,8 +82,8 @@ async function main(canvas) {
     }
     function touchEnd(e) {
         e.preventDefault();
-        touchX(null);
-        touchY(null);
+        mario.go.dir = 0;
+        mario.jump.cancel();
     }
 
     const timer = new Timer(1/60);
